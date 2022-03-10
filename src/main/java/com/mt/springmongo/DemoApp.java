@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * Main Application controller.
  *
- * @author Mithun 
+ * @author 
  */
 @Controller
 @EnableAutoConfiguration
-@ComponentScan(basePackages = "com.mt.*")
+@ComponentScan(basePackages = "J-Babi*")
 public class DemoApp {
 
     public static void main(String[] args) {
