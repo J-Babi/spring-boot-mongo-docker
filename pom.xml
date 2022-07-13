@@ -94,7 +94,7 @@
             <repository>
 	      <id>deployment</id>
 	      <name>J-Babi Release Nexus Repository</name>
-	      <url>http://18.217.59.252:8081/repository/sbm_1release/</url>
+	      <url>http://18.217.59.252:8081/repository/sbm1_release/</url>
             </repository> 
 	    <snapshotRepository>
 	      <id>deployment</id>
