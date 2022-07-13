@@ -12,7 +12,7 @@
 	</parent>
 	<groupId>com.mt</groupId>
 	<artifactId>spring-boot-mongo</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.1</version>
 	<packaging>war</packaging>
 	<properties>
 		<java.version>1.8</java.version>
@@ -94,12 +94,12 @@
             <repository>
 	      <id>deployment</id>
 	      <name>J-Babi Release Nexus Repository</name>
-	      <url>http://18.217.59.252:8081/repository/sbm1-release/</url>
+	      <url>http://18.217.59.252:8081/repository/sbm2-release/</url>
             </repository> 
 	    <snapshotRepository>
 	      <id>deployment</id>
 	      <name>J-Babi snapshot Nexus Repository</name>
-	      <url>http://18.217.59.252:8081/repository/sbm1-snapshot/</url>
+	      <url>http://18.217.59.252:8081/repository/sbm2-snapshot/</url>
             </snapshotRepository>
 			
         </distributionManagement>
