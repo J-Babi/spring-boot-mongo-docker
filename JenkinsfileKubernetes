@@ -1,12 +1,12 @@
 node{
-     
+  def mavenHome =  tool name: "Maven-3.8.6", type: "maven"
+  def mavenCMD = "${mavenHome}/bin/mvn"
+  
     stage('SCM Checkout'){
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'GitHub-cred', url: 'https://github.com/J-Babi/spring-boot-mongo-docker.git']]])
     }
     
     stage(" Maven Clean Package"){
-      def mavenHome =  tool name: "Maven-3.8.6", type: "maven"
-      def mavenCMD = "${mavenHome}/bin/mvn"
       sh "${mavenCMD} clean package"
       
     } 
