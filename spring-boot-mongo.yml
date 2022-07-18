@@ -1,0 +1,36 @@
+---
+## Spring Boot App
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springappdeployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springapp
+  template:
+    metadata:
+      name: springapppod
+      labels:
+        app: springapp
+    spec:
+      containers:
+      - name: springappcontainer
+        image: dockerhandson/spring-boot-mongo
+        ports:
+        - containerPort: 8080
+        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: springapp
+spec:
+  selector:
+    app: springapp
+  ports:
+  - port: 80
+    targetPort: 8000
+  type: LoadBalancer # NodePort
+---
