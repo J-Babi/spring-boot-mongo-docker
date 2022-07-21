@@ -18,6 +18,10 @@ spec:
       containers:
       - name: springappcontainer
         image: mylandmarktech/spring-boot-mongo #jbabi/spring-boot-mongo3 #dockerhandson/spring-boot-mongo
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "256m"
         ports:
         - containerPort: 8080
         
@@ -32,5 +36,7 @@ spec:
   ports:
   - port: 80
     targetPort: 8000
-  type: LoadBalancer # NodePort
+    nodePort: 31000
+  type: NodePort #LoadBalancer 
+  
 ---
