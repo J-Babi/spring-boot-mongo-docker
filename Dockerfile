@@ -10,4 +10,4 @@ COPY target/spring-boot-mongo-0.0.1.war $PROJECT_HOME/spring-boot-mongo.war
 
 WORKDIR $PROJECT_HOME
 
-CMD ["java" ,"-jar","./spring-boot-mongo.war"]
+CMD ["java", "-jar", "./spring-boot-mongo.war"]
